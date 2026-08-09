@@ -1,0 +1,14 @@
+Atuin is installed via the official installer, not pacman/aur:
+  curl --proto '=https' --tlsv1.2 -sSf https://setup.atuin.sh | sh
+
+Shell integration (sourcing ~/.atuin/bin/env, `atuin init zsh`) lives in the zsh submodule.
+
+After install.sh links this config (sync_address = https://atuin.yggdrasil.cfd):
+  - First machine (no account yet):
+      atuin register -u <username> -e <email>
+  - Every other machine (same account, needs the encryption key from the first machine,
+    e.g. `atuin key` there, or the ATUIN_SESSION/key file copied over):
+      atuin login -u <username> -k <encryption-key>
+  - Then check:
+      atuin sync
+      atuin status
