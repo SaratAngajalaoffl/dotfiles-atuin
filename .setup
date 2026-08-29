@@ -3,7 +3,7 @@ Atuin is installed via the official installer, not pacman/aur:
 
 Shell integration (sourcing ~/.atuin/bin/env, `atuin init zsh`) lives in the zsh submodule.
 
-After install.sh links this config (sync_address = https://atuin.yggdrasil.cfd):
+After install.sh links this config (sync_address = https://atuin.your-server.example):
   - First machine (no account yet):
       atuin register -u <username> -e <email>
   - Every other machine (same account, needs the encryption key from the first machine,
